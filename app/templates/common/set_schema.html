@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+<div class="block1">
+
+  <form method="post">
+    <label for="select_schema">Schema</label>
+    <select name="select_schema" method="GET" action="/">
+      <option value="{{schemas[0]}}" selected>{{schemas[0]}}</option>
+      {% for schema in schemas[1:] %}
+      <option value= "{{schema}}">{{schema}}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" name="submit" value="Set Schema">
+  </form>
+</div>
+{% endblock %}

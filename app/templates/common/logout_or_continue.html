@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+<div class="block1">
+    <h1>Logout or Continue?</h1>
+    <h2>Looks like you're already logged in. Would you like to continue as: </h2>
+    <label name="server">Server: </label>{{server}}<br/>
+    <label name="database">Database: </label>{{database}}<br/>
+    <label name="username">Username: </label>{{username}}<br/>
+    
+    <form action="/extract" method="post">
+        <input type="submit" name="stay_submit" value="Stay Logged In">
+        <input type="submit" name="log_out_submit" value="Log Out">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="block1">
+
+        <form action="/login" method="post">
+                <label for="select_server">Server</label>
+                <input id="select_server" name="select_server" type="text" value="laughlin_constable.channelmix.com" class="form-control input-md">
+
+                <label for="select_db">Database</label>
+                <input id="select_db" name="select_db" type="text" value='laughlin_constable' class="form-control input-md">
+
+                <label for="select_username">Username</label>
+                <input id="select_username" name="select_username" type="text" value='laughlin_constable_reporting' class="form-control input-md">
+
+                <label for="select_password">Password</label>
+                <input id="select_password" name="select_password" type="text" class="form-control input-md">
+
+                <label for="select_port">Port</label>
+                <input id="select_port" name="select_port" type="text" value='5439' class="form-control input-md">
+
+                <input type="submit" name="submit" value="Access Data">
+        </form>
+</div>
+{% endblock %}

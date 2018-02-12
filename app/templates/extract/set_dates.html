@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="block1">
+
+        <form action="/" method="post">
+            <label name="actual dates">The date range is {{date_range}}</label>
+                <label for="select_start_date">Start Date</label>
+                <input id="select_start_date" name="select_start_date" type="text" placeholder="yyyy-mm-dd" class="form-control input-md">
+
+                <label for="select_end_date">End Date</label>
+                <input id="select_end_date" name="select_end_date" type="text" placeholder="yyyy-mm-dd" class="form-control input-md">
+
+                <input type="submit" name="submit" value="Access Data">
+        </form>
+</div>
+{% endblock %}

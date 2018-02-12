@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+<div class="block1">
+
+  <form action="/extract/set-table" method="post">
+    <label for="selectTable">Table</label>
+    <select name="select_table" method="GET" action="/">
+      <option value="{{tables[0]}}" selected>{{tables[0]}}</option>
+      {% for table in tables[1:] %}
+      <option value= "{{table}}">{{table}}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" name="submit" value="Set Table">
+  </form>
+</div>
+{% endblock %}

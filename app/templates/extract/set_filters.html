@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+<div class="block1">
+
+    <form action="/extract/set-filters" method="post">
+        <label for="chooseFilters">Filters</label>
+        <select name="choose_filters">
+        <option value="{{filters[0]}}" selected>{{filters[0]}}</option>
+        {% for filter in filters[1:] %}
+        <option value= "{{filter}}">{{filter}}</option>
+        {% endfor %}
+        </select>
+        <input type="submit" name="submit" value="Select Filter">
+    
+        <label for="setFilters">Filter Options</label>
+        <select name="set_filters" method="GET">
+        <option value="{{filter_options[0]}}" selected>{{filter_options[0]}}</option>
+        {% for filter_option in filter_options[1:] %}
+        <option value= "{{filter_option}}">{{filter_option}}</option>
+        {% endfor %}
+        </select>
+        <input type="submit" name="submit" value="Add Filter">
+    </form>
+
+    <label for="currentFilters">Current Filters</label>
+    <select name="current_filters" method="GET">
+    <option value="{{current_filters[0]}}" selected>{{current_filters[0]}}</option>
+    {% for current_filter in current_filters[1:] %}
+    <option value= "{{current_filter}}">{{current_filter}}</option>
+    {% endfor %}
+    </select>
+
+
+    <input type="submit" name="submit" value="Done Adding Filters">
+</div>
+{% endblock %}

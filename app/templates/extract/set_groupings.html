@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+<div class="block1">
+
+  <form action="/extract/set-groupings" method="post">
+    <label for="selectGroupings">Groupings</label>
+    <select multiple name="select_groupings">
+        {% for group in groupings %}
+        <option value= "{{group}}">{{group}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" name="submit" value="Set Groupings">
+  </form>
+</div>
+{% endblock %}
+
+
+

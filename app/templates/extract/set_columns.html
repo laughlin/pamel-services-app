@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+<div class="block1">
+
+  <form action="/extract/set-columns" method="post">
+    <label for="selectColumns">Columns</label>
+    <select multiple name="select_columns">
+        {% for column in columns %}
+        <option value= "{{column}}">{{column}}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" name="submit" value="Set Extract Columns">
+  </form>
+</div>
+{% endblock %}
